@@ -1,0 +1,22 @@
+{
+    "version" : 1,
+    "loggers" : {
+        "text_editor" : {"handlers" : ["editor"],
+			"level" : "DEBUG"}
+    	      	},
+    "handlers" : {
+        "editor" : {"class" : "logging.handlers.RotatingFileHandler",
+		    "level" : "DEBUG",
+		    "encoding" : "utf-8",
+		    "filename" : "_LOG_DIR_editor.log",
+		    "mode" : "a",
+		    "maxBytes" : 131072,
+		    "backupCount" : 1,
+		    "formatter" : "simple"}
+    	       	 },
+
+    "formatters" : {
+        "simple" : {"format" : "{asctime}\n{message}\n",
+       		    "style" : "{" }
+                   }    
+}
